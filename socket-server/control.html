@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>Crowd Control</title>
+  
+    <!-- css from professionals -->
+    <link href="/Flat-UI-master/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+    
+    <!-- css from me -->
+    <link href="/css/light-sockets.css" rel="stylesheet">
+    
+    <!-- js from professionals -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery-1.8.3.min.js"></script>
+    
+    <!-- js from me -->
+    <script src="/js/time_sync.js"></script>
+    <script src="/js/control.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="span3">
+        <div class="control-group success" id="scene_name_div">
+          <input class="span3" id="scene_name_input" type="text" placeholder="Scene label" value=""></input>
+          <i class="input-icon fui-check-inverted" id="scene_name_check"></i>
+        </div>
+      </div>
+      
+      <div id="monitor">
+        <div class="progress red">
+          <div class="bar" id="slider_red" style="height: 25%;"></div>
+        </div>
+        
+        <div class="progress green">
+          <div class="bar" id="slider_green" style="height: 50%;"></div>
+        </div>
+        
+        <div class="progress blue">
+          <div class="bar" id="slider_blue" style="height: 75%;"></div>
+        </div>
+        
+        <div id="screen"></div>
+      </div>
+    
+      <div id="controls">
+        <div class="btn btn-large btn-block btn-primary" id="add_scene_button">
+          Add Scene
+        </div>
+        
+        <div class="btn btn-large btn-block btn-primary" id="cancel_scene_button">
+          Cancel Scene
+        </div>
+          
+        <div class="btn btn-large btn-block btn-primary disabled" id="start_recording_button">
+          Start Recording
+        </div>
+       
+        <div class="btn btn-large btn-block btn-primary disabled" id="stop_recording_button">
+          Stop Recording
+        </div>
+        
+        <div class="btn btn-large btn-block btn-primary" id="play_scene_button">
+          Play Scene
+        </div>
+        
+        <div class="btn btn-large btn-block btn-primary" id="delete_scene_button">
+          Delete Scene
+        </div>
+      </div>
+      
+      <div id="scenes"></div>
+    </div>
+  </body>
+</html>
